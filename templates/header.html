@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title> Team 9 | FB Post Planner </title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-datetimepicker.min.css">
+
+    <script src="/static/js/vendors/jquery.js"></script>
+    <script src="/static/js/vendors/bootstrap.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/bootstrap-datetimepicker.min.js"></script>
+</head>
+
+<body>
+
+
+<style>
+
+  body{
+    background: url("/static/image/background.jpg") no-repeat fixed;
+    overflow-x: hidden;
+    background-size: cover;
+  }
+
+  #header{
+    background-color: #FF798E;
+    border: 0px;
+  }
+
+  #tab{
+    background-color: #FE8196;
+  }
+
+  #fb-login,
+  #fb-logout {
+    background-color: #FF556F;
+    border: 0px;
+  }
+
+  #message {
+    resize:none;
+    height: 150px;
+    width: 1000px;
+    margin-left: 50px;
+  }
+
+  #message:focus {
+    resize:none;
+    height: 150px;
+    width: 1000px;
+    margin-left: 50px;
+  }
+
+  #button{
+    margin-left: 380px;
+  }
+
+  #post-now{
+    margin-left: 0px;
+  }
+
+  #button,
+  #post-now {
+    background-color: #71A5FF;
+    border: 0px;
+    width: 150px;
+  }
+
+  #button:hover,
+  #post-now:hover {
+    background-color: #3989FF;
+    border: 0px;
+    font-weight:bold; 
+    transition:0.5s;
+    -webkit-transition:0.4s;
+  }
+
+</style>
+
+
+
+    <div id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">FB Post Planner</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a id="tab" href="/">Home</a></li>
+              <li><a href="#" id="list">Schedule</a></li>
+            </ul>
+            <div id="fb-login" type="button" class="btn btn-primary navbar-btn navbar-right"><i class="fa fa-facebook"></i> &nbsp&nbsp Log in</div>
+            <div id="fb-logout" type="button" class="btn btn-primary navbar-btn navbar-right" style="display:none"><i class="fa fa-facebook"></i>  &nbsp&nbsp Log out</div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </body>

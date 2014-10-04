@@ -1,0 +1,92 @@
+<html>
+<body>
+
+<style>
+
+  body{
+    background: url("/static/image/background.jpg") no-repeat fixed;
+    overflow-x: hidden;
+    background-size: cover;
+  }
+
+  #header{
+    background-color: #FF798E;
+    border: 0px;
+  }
+
+  #tab{
+    background-color: #FE8196;
+  }
+
+</style>
+
+
+<div class="container" style='top: 70px; position: relative;'>
+    <div class='row well blue'>
+
+
+    <div class="postlist">
+    	<div><h4>Scheduled Posts:</h4></div>
+
+    	{% for post in posts %}
+    	
+       		<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">{{post.date_to_post}}
+			    	<a style="height: 25px; width: 60px; font-size: 10pt;" class="btn btn-info pull-right" href="/edit/{{post.key.id()}}">Edit</a>
+			    	<a style="height: 25px; width: 60px; font-size: 10pt;" class="btn btn-info pull-right" href="/delete/{{post.key.id()}}">Delete</a>
+			    </h3>
+			    
+			  </div>
+			  <div class="panel-body">
+			    {{post.message}}
+			  </div>
+			</div>
+    	{% else %}
+    	
+    	<div>
+       	 	No pending status.
+       	 </div>
+       	 {% endfor %}
+
+    </div>
+
+    <br><br>
+    <div class="postlist container" style="width:1000px; background-color: rgba(255,255,255, 0.7);
+          border-radius: 3px;">
+      <div><center><h4>Posted:</h4></center></div>
+      {% for post in posted %}
+      
+          <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{post.date_to_post}}
+            <a class="badge pull-right" href="/delete/{{post.key.id()}}">Delete</a>
+          </h3>
+          
+        </div>
+        <div class="panel-body">
+          {{post.message}}
+        </div>
+      </div>
+      {% else %}
+      
+      <div>
+        <center>
+          No posted status yet.
+         </div>
+         {% endfor %}
+         </center>
+    </div>
+    	
+
+
+    
+<br><br>
+
+    	<!-- End of Content-->
+        <div style="margin-left: 460px;" class="fb-like" data-href="https://developers.facebook.com/apps/951045798244604/dashboard/" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+    </div>
+
+</div>
+</body>
+</html>

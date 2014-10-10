@@ -14,10 +14,6 @@
     border: 0px;
   }
 
-  #tab{
-    background-color: #FE8196;
-  }
-
 </style>
 
 
@@ -26,15 +22,16 @@
 
 
     <div class="postlist">
+    <center>
     	<div><h4>Scheduled Posts:</h4></div>
-
+    </center>
     	{% for post in posts %}
     	
        		<div class="panel panel-info">
 			  <div class="panel-heading">
 			    <h3 class="panel-title">{{post.date_to_post}}
+            <a style="height: 25px; width: 60px; font-size: 10pt;" class="btn btn-info pull-right" href="/delete/{{post.key.id()}}">Delete</a>
 			    	<a style="height: 25px; width: 60px; font-size: 10pt;" class="btn btn-info pull-right" href="/edit/{{post.key.id()}}">Edit</a>
-			    	<a style="height: 25px; width: 60px; font-size: 10pt;" class="btn btn-info pull-right" href="/delete/{{post.key.id()}}">Delete</a>
 			    </h3>
 			    
 			  </div>
@@ -45,8 +42,10 @@
     	{% else %}
     	
     	<div>
-       	 	No pending status.
-       	 </div>
+        <center>
+       	--- No scheduled status ---
+        </center> 	 
+      </div>
        	 {% endfor %}
 
     </div>
@@ -60,7 +59,7 @@
           <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">{{post.date_to_post}}
-            <a class="badge pull-right" href="/delete/{{post.key.id()}}">Delete</a>
+            <a style="height: 25px; width: 60px; font-size: 10pt;" class="btn btn-info pull-right" href="/delete/{{post.key.id()}}">Delete</a>
           </h3>
           
         </div>
@@ -72,10 +71,10 @@
       
       <div>
         <center>
-          No posted status yet.
-         </div>
+         --- No posted status yet ---
+      </div>
          {% endfor %}
-         </center>
+        </center>
     </div>
     	
 

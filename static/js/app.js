@@ -89,7 +89,7 @@ function initialize() {
         if(user){
             $("#list").attr("href","/list/"+user.userID);
         }else{
-            alert("Please Login");
+            alert("Please Log in");
         }
         
     }
